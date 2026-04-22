@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+    <h1>🎉 Welcome 🎉</h1>
+
+    <label>Username</label>
+    <input id="username" type="text" placeholder="Enter Username 'AKKA'">
+
+    <label>Password</label>
+    <input id="password" type="password" placeholder="YYYYMMDD" inputmode="numeric">
+
+    <div class="captcha-box">
+        <span id="captchaText"></span>
+        <button onclick="generateCaptcha()">↻</button>
+    </div>
+
+    <input id="captchaInput" placeholder="Enter CAPTCHA">
+
+    <label>
+        <input type="checkbox" id="verifyCaptcha">
+        Verify CAPTCHA
+    </label>
+
+    <div id="emailSection" class="hidden">
+        <input id="email" type="email" placeholder="Enter Email">
+
+        <button onclick="sendOTP()">Send OTP</button>
+        <button id="resendBtn" onclick="sendOTP()" disabled>Resend OTP</button>
+
+        <div id="timer"></div>
+    </div>
+
+    <p id="msg"></p>
+
+</div>
+
+<!-- 🔐 OTP POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-box">
+
+        <h2>Enter OTP</h2>
+
+        <div class="otp-container" id="otpInputs">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+        </div>
+
+        <p id="otpTimerText">Expires in 05:00</p>
+
+        <button id="verifyBtn" onclick="verifyOTP()">Verify</button>
+
+    </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

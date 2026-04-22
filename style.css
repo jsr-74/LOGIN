@@ -1,0 +1,101 @@
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, #ff6ec4, transparent),
+                radial-gradient(circle at 80% 80%, #7873f5, transparent),
+                black;
+    animation: moveBg 12s infinite alternate;
+}
+
+@keyframes moveBg {
+    to { transform: scale(1.1); }
+}
+
+/* CARD */
+.card {
+    width: 90%;
+    max-width: 420px;
+    margin: 8vh auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 40px rgba(255,110,196,0.4);
+    color: white;
+    text-align: center;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg,#ff6ec4,#7873f5);
+    color: white;
+    margin-top: 10px;
+}
+
+/* CAPTCHA */
+.captcha-box {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* OTP BOX */
+.otp-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.otp-container input {
+    width: 45px;
+    height: 55px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.hidden { display: none; }
