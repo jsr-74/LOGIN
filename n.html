@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title></title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -22,8 +20,14 @@
     <input id="username" type="text" placeholder="Enter Username 'AKKA'">
 
     <label>Password</label>
-    <input id="password" type="password" placeholder="YYYYMMDD" inputmode="numeric">
+    <input id="password" type="password" placeholder="YYYYMMDD" inputmode="numeric" maxlength="8">
+                <label class="birthday-checkbox">
+                <input type="checkbox" id="showPassword">
+                <span class="checkmark"></span>
+                <span class="label-text">Show Password 🎂</span>
+            </label>
 
+    <!-- CAPTCHA -->
     <div class="captcha-box">
         <span id="captchaText"></span>
         <button onclick="generateCaptcha()">↻</button>
@@ -33,9 +37,10 @@
 
     <label>
         <input type="checkbox" id="verifyCaptcha">
-        Verify CAPTCHA
+        <span id="verifyCaptchaLabel">Verify CAPTCHA</span>
     </label>
 
+    <!-- EMAIL -->
     <div id="emailSection" class="hidden">
         <input id="email" type="email" placeholder="Enter Email">
 
@@ -49,7 +54,7 @@
 
 </div>
 
-<!-- 🔐 OTP POPUP -->
+<!-- OTP POPUP -->
 <div id="popup" class="popup">
     <div class="popup-box">
 
@@ -64,13 +69,14 @@
             <input maxlength="1" inputmode="numeric">
         </div>
 
-        <p id="otpTimerText">Expires in 05:00</p>
+        <p id="otpTimerText">Expires in 01:00</p>
 
         <button id="verifyBtn" onclick="verifyOTP()">Verify</button>
 
     </div>
 </div>
 
-<script src="script.js" defer></script>
+<script src="script.js"></script>
+
 </body>
 </html>
